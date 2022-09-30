@@ -22,6 +22,6 @@ app.post('/', (req, res) => {
   res.render('index', {password: password, options: options})
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`this genertor is running on http://localhost:${port}`)
 })
